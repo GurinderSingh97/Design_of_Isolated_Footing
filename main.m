@@ -25,3 +25,16 @@ disp("\n")
 [Development_length,Length_Available_of_Bars_x,Length_Available_of_Bars_y] = Development_length(L,B,b,d,fck,fy,dia,Sc);
 disp("\n")
 Bearing_stress(P,b,d,Overall_D,fck)
+disp("\n")
+disp("Cost Analysis of steel")
+[Total_length_of_bars] = Total_length_of_bars(L,B,Sc,No_of_Reinforced_Bars_x,No_of_Reinforced_Bars_y);
+[Weight_of_bar_per_meter,Total_weight_of_bars]=Weight_of_bar(dia,Total_length_of_bars);
+Total_cost_of_steel = Cost_of_steel*Total_weight_of_bars;
+printf("Total_cost_of_steel = Rs.%d \n",Total_cost_of_steel)
+disp("\n")
+disp("Cost Analysis of concrete")
+[Volume_of_concrete] = Volume_of_concrete(L,B,Overall_D,dia,Total_length_of_bars);
+[No_of_cement_bag,Volume_of_sand,Volume_of_coarse_aggregate] = Quantities(Volume_of_concrete,Ratio_cement,Ratio_sand,Ratio_coarse_aggregate,Volume_of_one_bag_cement);
+Cost_of_total_cement_bags = Cost_of_concrete_bag*No_of_cement_bag
+Cost_of_sand_per_cubic_meter = Cost_of_sand*Volume_of_sand
+Cost_of_coarse_aggregate = Cost_of_coarse_aggregate*Volume_of_coarse_aggregate
