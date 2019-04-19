@@ -1,0 +1,54 @@
+%% Load on column in N
+# name: P
+# type: scalar
+600000
+
+%% Assume Self weight of footing in %
+# name: Sw
+# type: scalar
+10
+
+%% Soil Pressure in N/mm^2
+# name:Sp
+# type: scalar
+0.12
+
+%% fck in N/mm^2
+# name:fck
+# type: scalar
+20
+
+%% fy in N/mm^2
+# name:fy
+# type: scalar
+415
+
+%% Size of column in mm
+# name:b
+# type: scalar
+400
+
+%% Size of column in mm
+# name:d
+# type: scalar
+600
+
+# name: pt
+# type: scalar
+0.3
+
+%% Clear cover for footing in mm
+# name: Cc
+# type: scalar
+60
+
+%% Side cover in mm
+# name: Sc
+# type: scalar
+60
+
+%% dia of reinforced bar in mm
+# name: dia
+# type: scalar
+12
+
