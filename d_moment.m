@@ -19,14 +19,14 @@ xu_max_by_d = (700)/(1100+0.87*fy);
 Ru = (0.36*fck*xu_max_by_d*(1-0.416*xu_max_by_d));
 Mx = Net_upward_pressure*(B/8)*(L-d)*(L-d); 
 Mux = Mx;
-My = Net_upward_pressure*(L/8)*(B-b)*(B-b); 
+My = Net_upward_pressure*(L/8)*(B-b)*(B-b);
 Muy = My;
 if(Mux>=Muy)
 d_moment = ceil((sqrt(Mux/(Ru*B)))/10)*10;
 printf("d_moment = %d mm \n",d_moment)
 D_moment = d_moment+Cc;
 printf("D_moment = %d mm \n",D_moment)
-elseif(Mux<=Muy)
+elseif(Mux<Muy)
 d_moment = ceil((sqrt(Muy/(Ru*L)))/10)*10;
 printf("d_moment = %d mm \n",d_moment)
 D_moment = d_moment+Cc;

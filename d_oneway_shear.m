@@ -31,7 +31,7 @@ d_oneway_shear_y = round((Net_upward_pressure*B_bey_col)/(Net_upward_pressure+tc
 if(d_oneway_shear_x>=d_oneway_shear_y)
 d_oneway_shear = ceil((d_oneway_shear_x)/10)*10;
 printf("d_oneway_shear = %d mm \n",d_oneway_shear)
-elseif(d_oneway_shear_x<=d_oneway_shear_y)
+elseif(d_oneway_shear_x<d_oneway_shear_y)
 d_oneway_shear = ceil((d_oneway_shear_y)/10)*10;
 printf("d_oneway_shear = %d mm \n",d_oneway_shear)
 endif
